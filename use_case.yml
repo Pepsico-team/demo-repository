@@ -1,0 +1,194 @@
+name: Use Case
+description: Functional behavior of the system (Use Case specification)
+title: "[UC-XXX] <Use Case Name>"
+labels:
+  - type:use-case
+
+body:
+  - type: input
+    id: uc_id
+    attributes:
+      label: UC ID
+      description: Unique Use Case identifier (e.g. UC-001)
+      placeholder: UC-001
+    validations:
+      required: true
+
+  - type: input
+    id: uc_name
+    attributes:
+      label: UC Name
+      description: Short, clear name of the use case
+      placeholder: Upload solution
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Brief description of what this use case does
+      placeholder: >
+        This use case describes how ...
+    validations:
+      required: true
+
+  - type: input
+    id: primary_actor
+    attributes:
+      label: Primary Actor
+      description: Main actor who initiates the use case
+      placeholder: Student / System
+    validations:
+      required: true
+
+  - type: textarea
+    id: stakeholders
+    attributes:
+      label: Stakeholders & Interests
+      description: Stakeholders involved and their interests
+      placeholder: |
+        - Student: ...
+        - Instructor: ...
+        - System: ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: preconditions
+    attributes:
+      label: Preconditions
+      description: Conditions that must be true before the use case starts
+      placeholder: |
+        - User is authenticated
+        - Solution exists
+    validations:
+      required: true
+
+  - type: input
+    id: trigger
+    attributes:
+      label: Trigger
+      description: Event that starts the use case
+      placeholder: Student clicks "Upload solution"
+    validations:
+      required: true
+
+  - type: textarea
+    id: main_flow
+    attributes:
+      label: Main Flow (Basic Flow)
+      description: Step-by-step normal flow of events
+      placeholder: |
+        1. Actor does ...
+        2. System responds ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternate_flows
+    attributes:
+      label: Alternate / Exception Flows
+      description: Alternative or exceptional flows
+      placeholder: |
+        2a. Invalid input → system shows error
+    validations:
+      required: false
+
+  - type: textarea
+    id: postconditions
+    attributes:
+      label: Postconditions
+      description: System state after successful completion
+      placeholder: |
+        - Solution is stored
+        - Parsing process is triggered
+    validations:
+      required: true
+
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Inputs
+      description: Inputs required by the use case
+      placeholder: |
+        - Java source code
+        - Assignment ID
+    validations:
+      required: true
+
+  - type: textarea
+    id: outputs
+    attributes:
+      label: Outputs
+      description: Outputs produced by the use case
+      placeholder: |
+        - Stored solution
+        - Status message
+    validations:
+      required: true
+
+  - type: textarea
+    id: related_features
+    attributes:
+      label: Related Feature (Traceability)
+      description: Feature(s) this use case implements or derives from
+      placeholder: Implemented by <số hiệu FEAT>, eg. Implemented by #12 
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes_constraints
+    attributes:
+      label: Notes / Constraints
+      description: Additional notes, assumptions, or constraints
+      placeholder: |
+        - Java 8–17 only
+        - No multi-module support (phase 1)
+    validations:
+      required: false
+
+  - type: input
+    id: planned_iteration
+    attributes:
+      label: Planned Iteration
+      description: Planned sprint / milestone
+      placeholder: Iteration 1
+    validations:
+      required: false
+
+  - type: input
+    id: actual_iteration
+    attributes:
+      label: Actual Iteration
+      description: Actual sprint / milestone when implemented
+      placeholder: Iteration 2
+    validations:
+      required: false
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      description: Current status of the use case
+      options:
+        - Draft
+        - Approved
+        - Implemented
+        - Tested
+        - Done
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Business or development priority
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
