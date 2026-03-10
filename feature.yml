@@ -1,0 +1,70 @@
+name: Product Feature
+description: Product-level feature
+labels: ["type:feature"]
+body:
+  - type: textarea
+    attributes:
+      label: Feature Description
+
+  - type: dropdown
+    attributes:
+      label: Status
+      options:
+        - Proposed
+        - Approved
+        - Implemented
+        - Validated
+
+  - type: dropdown
+    attributes:
+      label: Priority
+      options:
+        - Must
+        - Should
+        - Could
+        - Won't
+  
+  - type: dropdown
+    attributes:
+      label: Difficulty
+      options:
+        - Low
+        - Medium
+        - High
+
+  - type: dropdown
+    attributes:
+      label: Stability
+      options:
+        - High
+        - Medium
+        - Low
+
+  - type: input
+    attributes:
+      label: Target Version
+  
+  - type: input
+    attributes:
+      label: Rationale
+
+  - type: input
+    attributes:
+      label: Cost
+
+  - type: input
+    attributes:
+      label: Defect
+
+  - type: input
+    attributes:
+      label: Planned Iteration
+
+  - type: input
+    attributes:
+      label: Actual Iteration
+  
+  - type: textarea
+    attributes:
+      label: Origin (Trace From)
+      description: Link related Need issues (e.g. #12)
